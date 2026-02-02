@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://bbh2gaa46gshh"]
 
 [ext_resource type="Script" uid="uid://bifyty0td1ho7" path="res://scripts/scenes/scene_world.gd" id="1_rg1s1"]
+[ext_resource type="Script" uid="uid://boq5b0vki2jsw" path="res://scripts/services/service_scene.gd" id="2_tnhg1"]
 
 [node name="SceneWorld" type="Node" unique_id=290973702]
 script = ExtResource("1_rg1s1")
+
+[node name="Services" type="Node" parent="." unique_id=1461434888]
+
+[node name="ServiceScene" type="Node" parent="Services" unique_id=367868030]
+script = ExtResource("2_tnhg1")
+
+[node name="Camera" type="Camera3D" parent="." unique_id=284392427]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 10, 10)

@@ -1,0 +1,100 @@
+[gd_scene format=4 uid="uid://cfhbplsd7tgu5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_poki1"]
+albedo_color = Color(0.43471667, 0.53956175, 0.1508885, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4xmkf"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 0.49999997, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABQACAAEAAwAGAAUABAACAAcABgAEAAcABQAHAAIABgAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD//wAA//8AAP////8AAAAA//8AAAAAAAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d0dsx"]
+resource_name = "tile_Tile"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 0.49999997, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP+f/3//3/8//9//f/+f/z8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_poki1"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///7//////AAD//wAA////////AAD//wAA/////////////1TVVNVU1VTVVNVU1VTVVNX/v/+//7//v/+//7//v/+/qiqqKqoqqiqqKqoqqiqqKv//////////////////////f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4xmkf")
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_2j40u"]
+vertices = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2j40u"]
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2j40u"]
+albedo_color = Color(0.483976, 0.3587047, 0.17968047, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1g8qg"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 0.49999997, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABQACAAEAAwAGAAUABAACAAcABgAEAAcABQAHAAIABgAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD//wAA//8AAP////8AAAAA//8AAAAAAAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_od8sr"]
+resource_name = "tile_Tile"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 0.49999997, 1),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP+f/3//3/8//9//f/+f/z8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_2j40u"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///7//////AAD//wAA////////AAD//wAA/////////////1TVVNVU1VTVVNVU1VTVVNX/v/+//7//v/+//7//v/+/qiqqKqoqqiqqKqoqqiqqKv//////////////////////f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1g8qg")
+
+[node name="Tiles" type="Node" unique_id=831622862]
+
+[node name="Grass" type="MeshInstance3D" parent="." unique_id=2050296878]
+mesh = SubResource("ArrayMesh_d0dsx")
+
+[node name="NavigationRegion" type="NavigationRegion3D" parent="Grass" unique_id=1491314558]
+navigation_mesh = SubResource("NavigationMesh_2j40u")
+
+[node name="StaticBody" type="StaticBody3D" parent="Grass" unique_id=1591466982]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="Grass/StaticBody" unique_id=1675327097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_2j40u")
+
+[node name="Dirt" type="MeshInstance3D" parent="." unique_id=823160527]
+mesh = SubResource("ArrayMesh_od8sr")
+
+[node name="NavigationRegion" type="NavigationRegion3D" parent="Dirt" unique_id=28677398]
+navigation_mesh = SubResource("NavigationMesh_2j40u")
+
+[node name="StaticBody" type="StaticBody3D" parent="Dirt" unique_id=1998644141]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="Dirt/StaticBody" unique_id=2021162111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_2j40u")
