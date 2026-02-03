@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bifyty0td1ho7" path="res://scripts/scenes/scene_world.gd" id="1_rg1s1"]
 [ext_resource type="Script" uid="uid://boq5b0vki2jsw" path="res://scripts/services/service_scene.gd" id="2_tnhg1"]
+[ext_resource type="PackedScene" uid="uid://d4bx058wvv18i" path="res://nodes/node_camera_controller.tscn" id="3_shw8p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_53212"]
 
 [node name="SceneWorld" type="Node" unique_id=290973702]
 script = ExtResource("1_rg1s1")
@@ -11,5 +14,12 @@ script = ExtResource("1_rg1s1")
 [node name="ServiceScene" type="Node" parent="Services" unique_id=367868030]
 script = ExtResource("2_tnhg1")
 
-[node name="Camera" type="Camera3D" parent="." unique_id=284392427]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 10, 10)
+[node name="NodeCameraController" parent="." unique_id=1322011246 node_paths=PackedStringArray("target") instance=ExtResource("3_shw8p")]
+target = NodePath("../Dummy")
+acceleration = 25.0
+friction = 0.9
+sensitivity = 0.1
+
+[node name="Dummy" type="MeshInstance3D" parent="." unique_id=1373849190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_53212")

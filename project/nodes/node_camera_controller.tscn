@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d4bx058wvv18i"]
+
+[ext_resource type="Script" uid="uid://2tu48aq1kfa1" path="res://scripts/nodes/node_camera_controller.gd" id="1_ml5u8"]
+
+[node name="NodeCameraController" type="Node3D" unique_id=1322011246]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+script = ExtResource("1_ml5u8")
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1027107178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
