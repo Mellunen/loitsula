@@ -7,7 +7,7 @@ const MIN_ANGLE: float = 10.0
 const MAX_ANGLE: float = 80.0
 const MIN_ZOOM: float = 2.5
 const MAX_ZOOM: float = 15.0
-const SPEED: float = 2.0
+const SPEED: float = 10.0
 
 
 # Properties #
